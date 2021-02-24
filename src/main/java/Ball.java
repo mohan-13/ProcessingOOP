@@ -21,4 +21,6 @@ public class Ball {
     {
         sketch.ellipse(ballSpeed*counter,ballPosition,DIAMETER, DIAMETER);
     }
+
+
 }

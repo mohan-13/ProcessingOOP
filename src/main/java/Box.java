@@ -9,7 +9,7 @@ public class Box implements Shape {
     private int yCoordinate;
     private int speed;
 
-    public Box(PApplet sketch, int xCoordinate, int yCoordinate, int speed) {
+    public Box(int xCoordinate, int yCoordinate, int speed) {
         this.sketch = sketch;
         this.xCoordinate = xCoordinate;
         this.yCoordinate = yCoordinate;

@@ -25,10 +25,10 @@ public class Main extends PApplet {
 
     @Override
     public void setup() {
-        ballOne=new Ball(this,0,HEIGHT*1/5,1);
-        ballTwo=new Ball(this,0,HEIGHT*2/5,2);
-        ballFour=new Ball(this,0,HEIGHT*4/5,4);
-        boxOne=new Box(this,0,HEIGHT*3/5,3);
+        ballOne=new Ball(0,HEIGHT*1/5,1);
+        ballTwo=new Ball(0,HEIGHT*2/5,2);
+        ballFour=new Ball(0,HEIGHT*4/5,4);
+        boxOne=new Box(0,HEIGHT*3/5,3);
         shapes = Arrays.asList(ballOne, ballTwo, boxOne, ballFour);
     }
 

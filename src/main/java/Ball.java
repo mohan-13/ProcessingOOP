@@ -15,12 +15,13 @@ public class Ball implements Shape {
     }
 
     public void moveLeftToRight() {
-        xCoordinate+=speed;
+        xCoordinate += speed;
 
     }
 
 
     public void draw(PApplet pApplet) {
-            pApplet.ellipse(xCoordinate,yCoordinate,DIAMETER,DIAMETER);
+        pApplet.fill(0,255,0);
+        pApplet.ellipse(xCoordinate, yCoordinate, DIAMETER, DIAMETER);
     }
 }

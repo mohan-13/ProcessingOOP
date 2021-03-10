@@ -23,6 +23,7 @@ public class Box implements Shape {
 
     @Override
     public void draw(PApplet pApplet) {
+        pApplet.fill(255,0,0);
         pApplet.rect(xCoordinate,yCoordinate,LENGTH,BREADTH);
 
     }

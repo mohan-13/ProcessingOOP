@@ -11,6 +11,7 @@ public class Main extends PApplet {
     private Ball ballTwo;
     private Ball ballThree;
     private Ball ballFour;
+    private Box boxOne;
     private List<Shape> shapes;
 
     public static void main(String[] args) {
@@ -29,7 +30,8 @@ public class Main extends PApplet {
         ballTwo=new Ball(this,0,HEIGHT*2/5,2);
         ballThree=new Ball(this,0,HEIGHT*3/5,3);
         ballFour=new Ball(this,0,HEIGHT*4/5,4);
-        shapes = Arrays.asList(ballOne, ballTwo, ballThree, ballFour);
+        boxOne=new Box(this,0,HEIGHT*3/5,3);
+        shapes = Arrays.asList(ballOne, ballTwo, boxOne, ballFour);
     }
 
     @Override

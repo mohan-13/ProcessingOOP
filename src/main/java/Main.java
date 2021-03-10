@@ -1,13 +1,18 @@
 import processing.core.PApplet;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Main extends PApplet {
 
-    public static final int HEIGHT = 480;
-    public static final int WIDTH = 640;
-    public Ball ballOne=new Ball(this,HEIGHT*1/5,1);
-    public Ball ballTwo=new Ball(this,HEIGHT*2/5,2);
-    public Ball ballThree=new Ball(this,HEIGHT*3/5,3);
-    public Ball ballFour=new Ball(this,HEIGHT*4/5,4);
+    private static final int HEIGHT = 480;
+    private static final int WIDTH = 640;
+    private Ball ballOne;
+    private Ball ballTwo;
+    private Ball ballThree;
+    private Ball ballFour;
+    private List<Shape> shapes;
+
     public static void main(String[] args) {
         PApplet.main("Main",args);
 
@@ -15,16 +20,23 @@ public class Main extends PApplet {
 
     @Override
     public void settings() {
-        super.settings();
-        size(WIDTH, HEIGHT);
+        size(WIDTH,HEIGHT);
+    }
+
+    @Override
+    public void setup() {
+        ballOne=new Ball(this,0,HEIGHT*1/5,1);
+        ballTwo=new Ball(this,0,HEIGHT*2/5,2);
+        ballThree=new Ball(this,0,HEIGHT*3/5,3);
+        ballFour=new Ball(this,0,HEIGHT*4/5,4);
+        shapes = Arrays.asList(ballOne, ballTwo, ballThree, ballFour);
     }
 
     @Override
     public void draw() {
-        Ball.step();
-        ballOne.showBall();
-        ballTwo.showBall();
-        ballThree.showBall();
-        ballFour.showBall();
+        shapes.forEach(Shape::moveLeftToRight);
+        shapes.forEach(shape -> shape.draw(this));
+
     }
+
 }

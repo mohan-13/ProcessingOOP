@@ -1,4 +1,6 @@
+import processing.core.PApplet;
+
 public interface Shape {
-    void move();
-    void draw();
+    void moveLeftToRight();
+    void draw(PApplet pApplet);
 }
